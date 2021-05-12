@@ -1,5 +1,6 @@
 var express = require("express");
 var app = express();
+var port = process.env.PORT || 8081;
 var server = require("http").Server(app);
 var io = require("socket.io")(server);
 var ManageSocketIO = require("./socketIO/ManageSocketIO");
@@ -16,6 +17,6 @@ app.get("/", (req, res) => {
 
 var manageSocket = new ManageSocketIO(io);
 
-server.listen(8081, () => {
+server.listen(port, () => {
   console.log("listening *: 8081");
 });
