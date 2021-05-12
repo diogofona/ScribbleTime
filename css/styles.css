@@ -1,0 +1,170 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* titles */
+h1 {
+  color: #007aff;
+  font-size: 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h4 {
+  color: #000000;
+}
+
+h2 {
+  color: #000000;
+}
+
+/* initOption */
+.initOption {
+  background-color: #f0f0f0;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  margin-top: 40px;
+  width: 400px;
+  height: 62px;
+  background-color: #007aff;
+  color: #fffefe;
+  border: none;
+  border-radius: 2px;
+}
+
+/* createdRomm */
+.info {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rectangle {
+  height: 400px;
+  width: 800px;
+  background-color: #d9d9db;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+
+.RoomCodeDisplay {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #000000;
+  font-size: 24px;
+  height: 25px;
+  width: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 20px;
+}
+
+/* player--inputs */
+.player-inputs {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoPlayer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+}
+
+.infoPlayer input {
+  width: 429px;
+  height: 25px;
+  font-size: 18px;
+}
+
+/* player-wait-draw */
+
+.player-wait-draw {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.points-players {
+  background-color: #d9d9db;
+  height: 100vh;
+  flex-grow: 0;
+  flex-direction: column;
+  padding-left: 15px;
+  padding-right: 15px;
+  align-items: center;
+}
+
+.wait-players {
+  flex-direction: column;
+  align-self: center;
+  text-align: center;
+  flex: 50%;
+}
+
+/* show-ans */
+.show-ans {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+/* show-canvas */
+.show-canvas {
+  margin-left: 20px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #000000;
+}
+
+/* canvas-holder */
+.canvas-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.word-toDraw {
+  align-items: center;
+  justify-content: center;
+}
+
+.divcanvas {
+  border-style: solid;
+  border-width: 5px;
+  border-color: #000000;
+}
+
+/* show-ans2 */
+.show-ans2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

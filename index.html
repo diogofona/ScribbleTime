@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scribble Time</title>
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="./canvas/phaser.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./socketIO/BrowserSocketIO.js"></script>
+  </head>
+  <body>
+    <div class="initOption" style="display: flex">
+      <h1>ScribbleTime</h1>
+      <button onclick="createRoom()">Criar</button>
+      <button onclick="AddPlayerOnRoom()">Juntar</button>
+    </div>
+
+    <!-- Ativa quando clicar no botão "Criar" na origem -->
+    <div class="createdRoom" style="display: none">
+      <div class="info">
+        <h1>ScribbleTime</h1>
+        <div class="rectangle">
+          <h4>Lista de Jogadores</h4>
+          <div class="listPlayersOnRoom" style="display: none">
+            <div class="listplayers"></div>
+          </div>
+        </div>
+      </div>
+      <p class="RoomCodeDisplay"></p>
+    </div>
+
+    <!-- Ativa quando clicar no botão "Entrar" na origem -->
+    <div class="player--inputs" style="display: none">
+      <div class="player-inputs">
+        <div class="infoPlayer">
+          <input
+            class="playername"
+            id="playername"
+            type="text"
+            placeholder="Nome do Jogador"
+          />
+        </div>
+
+        <div class="infoPlayer">
+          <input class="code" id="code" type="text" placeholder="Código" />
+        </div>
+
+        <div class="infoButton">
+          <button id="btnStart" onClick="entrar()" class="btn">Entrar</button>
+          <div id="playerWaitingMessage"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ecrã de Espera Desenhar -->
+    <div class="player-wait-draw" style="display: none">
+      <div class="points-players">
+        <h4>Pontuação dos Jogadores</h4>
+        <div class="listPlayersOnRoom2" style="display: none">
+          <div class="listplayers2"></div>
+        </div>
+      </div>
+      <div class="wait-players">
+        <h1 style="color: black">Ecrã de Espera</h1>
+        <h1 class="timer" style="color: black"></h1>
+      </div>
+	  <div class="wait-players-win" style="display: none;">
+        <h1 class="winner" style="color: black"></h1>
+      </div>
+      <div class="show-canvas" style="display: none">
+        <h1 style="color: black"></h1>
+        <canvas class="canvas-output" style="width: 800px; height: 420px">
+          Your browser does not support HTML5 Canvas.
+        </canvas>
+      </div>
+      <div class="show-ans" style="display: none">
+        <h2>Tempo para responder</h2>
+        <h2 class="timer2" style="color: black"></h2>
+        <button class="btn_ans_A" width="300"></button>
+        <button class="btn_ans_B" width="300"></button>
+      </div>
+    </div>
+
+    <!-- Ecrã de Desenho -->
+    <div class="canvas-holder" style="display: none">
+      <div class="" style="margin: auto">
+        <h2
+          class="word-toDraw"
+          style="color: black; z-index: 1; display: flex"
+        ></h2>
+        <div
+          id="conteudo"
+          class="divcanvas"
+          style="position: relative; z-index: 0"
+        >
+          <script src="./canvas/game.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ecrã de Seleção de palavra jogador -->
+    <div class="show-ans2" style="display: none">
+      <button class="btn_ans_A2" width="300" onclick="SelectA()">A</button>
+      <button class="btn_ans_B2" width="300" onclick="SelectB()">B</button>
+    </div>
+	
+	<div class="show-final" style="display:none; margin-left:40px;">
+      <h2 class="final_S" style="margin-left:40px;"></h2>
+    </div>
+
+    <div id="conteudos" class="div1canvas"></div>
+
+    <!-- Lista os jogadores presentes na sala -->
+    <div class="listPlayersOnRoom" style="display:none;">
+      <p>Jogadores na sala:</p>
+      <div class="listplayers"></div>
+    </div>
+  </body>
+</html>
